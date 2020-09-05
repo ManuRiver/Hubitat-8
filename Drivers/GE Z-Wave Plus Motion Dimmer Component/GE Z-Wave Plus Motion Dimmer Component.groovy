@@ -17,6 +17,8 @@ metadata {
 	definition (name: "GE Z-Wave Plus Motion Dimmer Component", namespace: "Botched1", author: "Jason Bottjen") {
 		capability "Configuration"
 		capability "Refresh"
+
+		capability "Actuator"
 		
 		command "setDefaultDimmerLevel", [[name:"Default Dimmer Level",type:"NUMBER", description:"Default Dimmer Level Used when Turning ON. (0=Last Dimmer Value)", range: "0..99"]]
 		command "setLightTimeout", [[name:"Light Timeout",type:"ENUM", description:"Time before light turns OFF on no motion - only applies in Occupancy and Vacancy modes.", constraints: ["5 seconds", "1 minute", "5 minutes (default)", "15 minutes", "30 minutes", "disabled"]]]
